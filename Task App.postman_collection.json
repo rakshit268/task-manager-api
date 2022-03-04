@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "9b163c3d-0ad1-45c0-827b-3084654b73fd",
+		"name": "Task App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"assadsasa\",\n    \"email\" : \"yummy1@getnada.com\",\n    \"password\": \"System@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"learning nodejs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/tasks",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users/me",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "fetch task by id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"monika\",\n    \"password\":\"baba1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users/me",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/tasks/6221dd2784905d001611232c",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"tasks",
+						"6221dd2784905d001611232c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"completed\":\"false\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tasks/62162f9efdf1a17e9240de4f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"62162f9efdf1a17e9240de4f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"yummy1@getnada.com\",\n    \"password\":\"baba1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users/login",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODU0NDB9.g27qQntAWKIa_S7-FmVECrnpyA5lbVUzvOBQGZpBWWI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users/logout",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout all",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjIxZDkxZjhkNDJmMzAwMTYzZmE4YzIiLCJpYXQiOjE2NDYzODc5NTJ9.SFGIvK7l0m4j9MnmwzeS9wyjYvpH7GetN901Mmyz1YI",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://task-manager-node-rest.herokuapp.com/users/logoutAll",
+					"protocol": "https",
+					"host": [
+						"task-manager-node-rest",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"logoutAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Avatar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
